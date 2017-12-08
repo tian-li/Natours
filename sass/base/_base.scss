@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* 设置root font-size, 10px方便rem计算, 浏览器默认字体16px, 62.5%就是10px */
+}
+
+body {
+  box-sizing: border-box;
+}
