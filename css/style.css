@@ -41,13 +41,15 @@ html {
   /* 设置root font-size, 10px方便rem计算, 浏览器默认字体16px, 62.5%就是10px */ }
 
 body {
+  box-sizing: border-box; }
+
+body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
+  padding: 3rem; }
 
 .heading-primary {
   color: #fff;
@@ -148,3 +150,23 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     /* 将按钮居中 */ }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .row [class^='cal-'] {
+    background-color: orangered;
+    float: left; }
+    .row [class^='cal-']:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
